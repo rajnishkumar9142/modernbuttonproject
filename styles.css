@@ -1,0 +1,44 @@
+/*#{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+#wrapper{
+    width:100hv;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.btn-pink{
+    background-color: #e84949;
+    padding: 1rem 2.2rem;
+    color:white;
+    font-size: 18px;
+    box-shadow: 2px 3px 1px 0px #000003;
+    position: relative;
+    z-index:1;
+}
+.btn-pink::before{
+    content:"";
+    background-color:green;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transform:scaleX(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index:-1;
+
+}
+.btn-pink:hover::before{
+    transform: scaleX(1);
+}
+
+
+
